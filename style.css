@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  font-family: "Ubuntu" , sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+  min-height: 100hv;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #11101d;;
+  padding: 6px 14px;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active{
+  width: 240px;
+}
+
+.sidebar .sidebar-content .sidebar-name{
+  color: #fff;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar.active .sidebar-content .sidebar-name{
+  opacity: 1;
+  pointer-events: none;
+  }
+
+.sidebar-content .sidebar-name i{
+  font-size: 28px;
+  margin-right: 5px;
+}
+
+.sidebar-content .sidebar-name{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sidebar #btn{
+  position: absolute;
+  color: #fff;
+  top: 6px;
+  left: 50%;
+  font-size: 22px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+}
+
+.sidebar.active #btn{
+  left: 90%;
+}
+
+.sidebar ul{
+  margin-top: 20px;
+}
+
+.sidebar ul li{
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin: 0 5px;
+  list-style: none;
+  line-height: 50px;
+}
+
+.sidebar ul li a{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  border-radius: 12px;
+}
+.sidebar ul li a:hover{
+  background: #fff;
+  color: #11101d;
+}
+
+.sidebar ul li a i{
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.sidebar .link-name{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar.active .link-name{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.home-content{
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 78px);
+  left: 78px;
+  transition: all 0.5s ease;
+}
+
+.home-content .text{
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+  margin: 12px;
+}
+
+.sidebar.active ~ .home-content{
+  width: calc(100% - 240px);
+  left: 240px;
+}

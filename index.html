@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel='stylesheet'href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME | Thypoon Project</title>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-content">       
+        <div class="sidebar-name">THYPOON PROJECT</div>
+          <i class="bx bx-menu" id="btn" ></i>
+      </div>  
+      <ul class="nav-list">
+        <li>
+          <a href="#">
+            <i class='bx bxl-windows'></i>
+            <span class="link-name">WINDOWS</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bxl-discord-alt'></i>
+            <span class="link-name">DISCORD</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bxl-twitter'></i>
+            <span class="link-name">TWITTER</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bxs-dashboard'></i>
+            <span class="link-name">DASHBOARD</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bxl-python'></i>
+            <span class="link-name">PYTHON</span>
+          </a>
+        </li>
+      </ul>        
+    </div>
+    <div class="home-content">
+      <div class="text">Home content</div>
+    </div>  
+  </body>
+
+  <script>
+   let btn = document.querySelector("#btn");
+   let sidebar = document.querySelector(".sidebar");
+
+   btn.onclick = function() {
+     sidebar.classList.toggle("active");
+     if(btn.classList.contains("bx-menu")){
+       btn.classList.replace("bx-menu" , "bx-menu-alt-right");
+     }else{
+       btn.classList.replace("bx-menu-alt-right", "bx-menu");
+     }
+   }
+   searchBtn.onclick = function() {
+     sidebar.classList.toggle("active");
+   }
+  </script>
+
+</html>
